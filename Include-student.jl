@@ -1,6 +1,10 @@
 # setup paths -
 const _ROOT = @__DIR__
-const _PATH_TO_SRC = joinpath(_ROOT, "src");
+#const _PATH_TO_SRC = joinpath(_ROOT, "src");
+#const _PATH_TO_SOLUTION = joinpath(_ROOT, "solution");
+include(joinpath(_PATH_TO_SRC, "Types.jl"))
+include(joinpath(_PATH_TO_SRC, "Factory.jl"))
+include(joinpath(_PATH_TO_SRC, "Compute.jl"))
 
 # check: do we need to download any packages?
 using Pkg
@@ -19,8 +23,9 @@ using LinearAlgebra
 using Statistics
 using DataFrames
 using PrettyTables
+using Test
 
 # load my codes -
-include(joinpath(_PATH_TO_SRC, "Types.jl"));
-include(joinpath(_PATH_TO_SRC, "Factory.jl"));
-include(joinpath(_PATH_TO_SRC, "Compute.jl"));
+include(joinpath(_PATH_TO_SOLUTION, "Types.jl"));
+include(joinpath(_PATH_TO_SOLUTION, "Factory.jl"));
+include(joinpath(_PATH_TO_SOLUTION, "Compute.jl"));
